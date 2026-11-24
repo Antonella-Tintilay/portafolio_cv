@@ -1,0 +1,18 @@
+COLOCAR EL CV EN ESTA CARPETA
+=============================
+
+Nombre exacto del archivo:
+
+    Tintilay_Antonella_CV.pdf
+
+Ruta final:
+
+    assets/Tintilay_Antonella_CV.pdf
+
+El botón "Descargar CV" del sitio apunta a esa ruta.
+Mientras el archivo no exista, el enlace no descargará nada.
+
+Importante para GitHub Pages:
+- El nombre distingue mayúsculas y minúsculas. Tiene que coincidir exactamente.
+- El archivo debe ser un PDF real, exportado desde Word, Google Docs, Canva, etc.
+- Este archivo de texto (LEEME.txt) no se muestra en el sitio: podés dejarlo o borrarlo.

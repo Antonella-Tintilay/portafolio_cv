@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Antonella Tintilay | Estudiante de Desarrollo de Software</title>
+  <meta
+    name="description"
+    content="Portafolio de Antonella Raquel Tintilay, estudiante de la Tecnicatura Superior en Análisis de Sistemas y Desarrollo de Software en Salta, Argentina. Proyectos académicos de desarrollo backend, web y bases de datos."
+  />
+  <meta name="author" content="Antonella Raquel Tintilay" />
+  <meta name="theme-color" content="#070a0e" />
+
+  <!-- Datos para cuando el sitio se comparta en redes sociales.
+       Cuando esté publicado, se puede agregar <meta property="og:url" content="https://..."> -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:title" content="Antonella Tintilay | Portafolio" />
+  <meta
+    property="og:description"
+    content="Estudiante de Desarrollo de Software. Proyectos académicos de backend, desarrollo web y bases de datos."
+  />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Sin JavaScript no hay botón de menú, así que en pantallas chicas
+       la navegación se muestra igual, en columna. -->
+  <noscript>
+    <style>
+      @media (max-width: 900px) {
+        .site-nav {
+          position: static;
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+          padding: 0 0 1rem;
+          border: 0;
+          background: transparent;
+          box-shadow: none;
+        }
+        .site-nav ul {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .nav-link {
+          padding: 0.6rem 0.25rem;
+          border-bottom: 1px solid #1e2836;
+        }
+        .nav-toggle {
+          display: none;
+        }
+        .nav-cta {
+          justify-content: center;
+          margin-top: 0.6rem;
+        }
+      }
+    </style>
+  </noscript>
+
+
+  
+  <script>
+    document.documentElement.classList.replace('no-js', 'js');
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- ===================== ENCABEZADO ===================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio">
+        <span class="brand-mark" aria-hidden="true">AT</span>
+        <span class="brand-text">Antonella Tintilay</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Abrir menú"
+      >
+        <span class="nav-toggle-bars" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+
+      <nav class="site-nav" id="primary-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+          <li><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li><a class="nav-link" href="#habilidades">Habilidades</a></li>
+          <li><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+
+        <a class="nav-cta" href="assets/Tintilay_Antonella_CV.pdf" download="Tintilay_Antonella_CV.pdf">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Descargar CV
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <!-- ===================== INICIO ===================== -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Portafolio · Salta, Argentina
+          </p>
+
+          <h1>Antonella Raquel <span class="accent">Tintilay</span></h1>
+
+          <p class="hero-role">Estudiante de Desarrollo de Software</p>
+
+          <p class="hero-text">
+            Estudiante de la Tecnicatura Superior en Análisis de Sistemas y Desarrollo de Software.
+            Me interesa el desarrollo backend y web, y aplico lo que aprendo en proyectos académicos
+            con Python, JavaScript, PHP y bases de datos.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#proyectos">
+              Ver proyectos
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+
+            <a class="btn btn-ghost" href="#contacto">Contactarme</a>
+
+            <a
+              class="btn btn-ghost"
+              href="assets/Tintilay_Antonella_CV.pdf"
+              download="Tintilay_Antonella_CV.pdf"
+            >
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Descargar CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE MÍ ===================== -->
+    <section class="section" id="sobre-mi">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-label"><span aria-hidden="true">01</span> Sobre mí</p>
+          <h2>Formación, práctica y ganas de seguir aprendiendo</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Estudiante de la Tecnicatura Superior en Análisis de Sistemas y Desarrollo de Software,
+              con conocimientos en programación, desarrollo web y bases de datos. Cuento con experiencia
+              práctica adquirida mediante proyectos académicos, trabajando con tecnologías como Python,
+              JavaScript, React, FastAPI y PostgreSQL. Me interesa continuar fortaleciendo mis habilidades
+              técnicas y adquirir experiencia profesional en el desarrollo de software.
+            </p>
+          </div>
+
+          <dl class="about-facts reveal">
+            <div>
+              <dt>Formación</dt>
+              <dd>Tecnicatura Superior en Análisis de Sistemas y Desarrollo de Software</dd>
+            </div>
+            <div>
+              <dt>Ubicación</dt>
+              <dd>Salta, Argentina</dd>
+            </div>
+            <div>
+              <dt>Enfoque</dt>
+              <dd>Desarrollo backend, web y bases de datos</dd>
+            </div>
+            <div>
+              <dt>Proyectos</dt>
+              <dd>Tres proyectos académicos</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROYECTOS ===================== -->
+    <section class="section" id="proyectos">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-label"><span aria-hidden="true">02</span> Proyectos</p>
+          <h2>Proyectos académicos</h2>
+          <p class="section-lead">
+            Trabajos desarrollados durante la tecnicatura. Los repositorios de IES Connect y
+            BUYDIMA están disponibles; Innova Home aún no cuenta con un repositorio público.
+          </p>
+        </div>
+
+        <div class="projects">
+          <!-- ---------------- Proyecto 1 ---------------- -->
+          <article class="project-card reveal">
+            <div class="project-head">
+              <p class="project-index">01</p>
+              <h3>IES Connect</h3>
+              <p class="project-role">Desarrolladora Backend</p>
+              <p class="project-status">
+                <span class="status-dot" aria-hidden="true"></span>
+                Proyecto académico · 2026
+              </p>
+
+              <a
+                class="project-link"
+                href="https://github.com/CristianFernando88/APP-MENSAJERIA-IES"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver repositorio
+              </a>
+            </div>
+
+            <div class="project-body">
+              <p class="project-desc">
+                Plataforma web institucional desarrollada como proyecto académico para la gestión
+                de usuarios y funcionalidades institucionales.
+              </p>
+
+              <div class="project-block">
+                <h4>Mi participación</h4>
+                <ul class="project-list">
+                  <li>Desarrollo de servicios y endpoints REST.</li>
+                  <li>Gestión de usuarios.</li>
+                  <li>Autenticación y autorización basada en roles.</li>
+                  <li>Gestión de credenciales y cambio obligatorio de contraseña.</li>
+                  <li>Integración de servicios de correo electrónico.</li>
+                  <li>Trabajo con modelos, relaciones y persistencia de datos.</li>
+                </ul>
+              </div>
+
+              <div class="project-block">
+                <h4>Tecnologías</h4>
+                <ul class="chips">
+                  <li>Python</li>
+                  <li>FastAPI</li>
+                  <li>PostgreSQL</li>
+                  <li>SQLAlchemy</li>
+                  <li>Pydantic</li>
+                  <li>Alembic</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---------------- Proyecto 2 ---------------- -->
+          <article class="project-card reveal">
+            <div class="project-head">
+              <p class="project-index">02</p>
+              <h3>BUYDIMA</h3>
+              <p class="project-role">Desarrolladora Web</p>
+              <p class="project-status">
+                <span class="status-dot" aria-hidden="true"></span>
+                Proyecto académico · en desarrollo local
+              </p>
+
+              <a
+                class="project-link"
+                href="https://github.com/Antonella-Tintilay/BUYDIMA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver repositorio
+              </a>
+            </div>
+
+            <div class="project-body">
+              <p class="project-desc">
+                Aplicación web de catálogo de productos digitales, desarrollada como proyecto académico.
+              </p>
+
+              <div class="project-block">
+                <h4>Mi participación</h4>
+                <ul class="project-list">
+                  <li>Desarrollo de funcionalidades de la aplicación.</li>
+                  <li>Búsqueda y filtrado dinámico de productos.</li>
+                  <li>Comunicación entre JavaScript y el backend mediante Fetch API.</li>
+                  <li>Formularios y validaciones del lado del servidor.</li>
+                  <li>Gestión de carrito y favoritos mediante localStorage.</li>
+                </ul>
+              </div>
+
+              <div class="project-block">
+                <h4>Tecnologías</h4>
+                <ul class="chips">
+                  <li>PHP</li>
+                  <li>JavaScript</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Bootstrap</li>
+                  <li>Fetch API</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---------------- Proyecto 3 ---------------- -->
+          <article class="project-card reveal">
+            <div class="project-head">
+              <p class="project-index">03</p>
+              <h3>Innova Home</h3>
+              <p class="project-role">Desarrollo de prototipo de domótica</p>
+              <p class="project-status">
+                <span class="status-dot" aria-hidden="true"></span>
+                Prototipo académico
+              </p>
+
+              <p class="project-link">
+                <span class="project-link-label">Repositorio</span>
+                <span class="project-pending">no disponible</span>
+              </p>
+            </div>
+
+            <div class="project-body">
+              <p class="project-desc">
+                Proyecto académico orientado a la automatización y el control de elementos de un hogar
+                mediante un microcontrolador ESP32.
+              </p>
+
+              <div class="project-block">
+                <h4>Mi participación</h4>
+                <ul class="project-list">
+                  <li>Desarrollo y armado del prototipo de hogar inteligente.</li>
+                  <li>Integración de componentes electrónicos y sensores.</li>
+                  <li>Programación del microcontrolador en Arduino IDE.</li>
+                </ul>
+              </div>
+
+              <div class="project-block">
+                <h4>Tecnologías y componentes</h4>
+                <ul class="chips">
+                  <li>ESP32</li>
+                  <li>Arduino IDE</li>
+                  <li>Pantalla LCD</li>
+                  <li>RFID RC522</li>
+                  <li>Sensor PIR</li>
+                  <li>LED</li>
+                  <li>Buzzer</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HABILIDADES ===================== -->
+    <section class="section" id="habilidades">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-label"><span aria-hidden="true">03</span> Habilidades</p>
+          <h2>Habilidades y herramientas</h2>
+          <p class="section-lead">
+            Tecnologías con las que trabajo en mis proyectos académicos. La lista refleja
+            herramientas utilizadas, sin niveles ni porcentajes.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-group reveal">
+            <h3>
+              <span class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </span>
+              Lenguajes de programación
+            </h3>
+            <ul class="chips">
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>PHP</li>
+            </ul>
+          </article>
+
+          <article class="skill-group reveal">
+            <h3>
+              <span class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <line x1="3" y1="9" x2="21" y2="9" />
+                  <line x1="9" y1="21" x2="9" y2="9" />
+                </svg>
+              </span>
+              Desarrollo frontend
+            </h3>
+            <ul class="chips">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>React</li>
+            </ul>
+          </article>
+
+          <article class="skill-group reveal">
+            <h3>
+              <span class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <rect x="2" y="3" width="20" height="7" rx="2" />
+                  <rect x="2" y="14" width="20" height="7" rx="2" />
+                  <line x1="6" y1="6.5" x2="6.01" y2="6.5" />
+                  <line x1="6" y1="17.5" x2="6.01" y2="17.5" />
+                </svg>
+              </span>
+              Desarrollo backend
+            </h3>
+            <ul class="chips">
+              <li>FastAPI</li>
+              <li>SQLAlchemy</li>
+            </ul>
+          </article>
+
+          <article class="skill-group reveal">
+            <h3>
+              <span class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <ellipse cx="12" cy="5" rx="9" ry="3" />
+                  <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5" />
+                  <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3" />
+                </svg>
+              </span>
+              Bases de datos
+            </h3>
+            <ul class="chips">
+              <li>PostgreSQL</li>
+              <li>MySQL</li>
+            </ul>
+          </article>
+
+          <article class="skill-group reveal">
+            <h3>
+              <span class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                </svg>
+              </span>
+              Herramientas
+            </h3>
+            <ul class="chips">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Visual Studio Code</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="contact-copy">
+            <p class="section-label"><span aria-hidden="true">04</span> Contacto</p>
+            <h2>¿Hablamos?</h2>
+            <p class="contact-text">
+              Estoy abierta a consultas, propuestas académicas y oportunidades para seguir aprendiendo.
+              Podés escribirme por correo o encontrarme en LinkedIn y GitHub.
+            </p>
+
+            <div class="contact-email">
+              <a class="email-link" href="mailto:antotintilay6@gmail.com">antotintilay6@gmail.com</a>
+              <button
+                class="copy-btn"
+                type="button"
+                data-copy="antotintilay6@gmail.com"
+                aria-label="Copiar el correo electrónico"
+              >
+                Copiar
+              </button>
+            </div>
+            <p class="copy-feedback" role="status" aria-live="polite"></p>
+          </div>
+
+          <ul class="contact-links">
+            <li>
+              <a href="https://www.linkedin.com/in/anto-tintilay-2b371b357" target="_blank" rel="noopener noreferrer">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" focusable="false">
+                    <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.45-2.16 2.96V21H9z" />
+                  </svg>
+                </span>
+                <span class="contact-label">LinkedIn<span class="sr-only"> (abre en una pestaña nueva)</span></span>
+                <svg class="contact-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                  stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <path d="M7 17 17 7" />
+                  <path d="M8 7h9v9" />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/Antonella-Tintilay" target="_blank" rel="noopener noreferrer">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" focusable="false">
+                    <path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.55v-2.1c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.29-1.68-1.29-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.04 1.77 2.73 1.26 3.4.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .3.2.66.8.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z" />
+                  </svg>
+                </span>
+                <span class="contact-label">GitHub<span class="sr-only"> (abre en una pestaña nueva)</span></span>
+                <svg class="contact-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                  stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <path d="M7 17 17 7" />
+                  <path d="M8 7h9v9" />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="assets/Tintilay_Antonella_CV.pdf" download="Tintilay_Antonella_CV.pdf">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                </span>
+                <span class="contact-label">Currículum (PDF)</span>
+                <svg class="contact-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                  stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <path d="M7 17 17 7" />
+                  <path d="M8 7h9v9" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== PIE DE PÁGINA ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">
+        © <span id="year">2026</span> Antonella Raquel Tintilay
+      </p>
+
+      <p class="footer-note">Diseñado y desarrollado con HTML, CSS y JavaScript.</p>
+
+      <ul class="footer-links">
+        <li>
+          <a href="https://github.com/Antonella-Tintilay" target="_blank" rel="noopener noreferrer">
+            GitHub<span class="sr-only"> (abre en una pestaña nueva)</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/anto-tintilay-2b371b357" target="_blank" rel="noopener noreferrer">
+            LinkedIn<span class="sr-only"> (abre en una pestaña nueva)</span>
+          </a>
+        </li>
+        <li><a href="mailto:antotintilay6@gmail.com">Correo</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#inicio" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      <line x1="12" y1="19" x2="12" y2="5" />
+      <polyline points="5 12 12 5 19 12" />
+    </svg>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
