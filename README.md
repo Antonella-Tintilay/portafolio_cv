@@ -116,8 +116,9 @@ El documento incluye título descriptivo, meta descripción, jerarquía de encab
 |---|---|
 | Estructura, diseño y funcionalidades | Implementado |
 | Currículum en PDF | Pendiente de incorporación |
-| Enlaces a repositorios y demos | Pendientes de publicación |
-| Despliegue en GitHub Pages | Pendiente |
+| Repositorios | IES Connect y BUYDIMA disponibles; Innova Home pendiente |
+| Demos | No disponibles |
+| Despliegue en GitHub Pages | Publicado |
 
 ### Currículum
 
@@ -125,19 +126,13 @@ La descarga apunta a `assets/Tintilay_Antonella_CV.pdf`. El nombre del archivo d
 
 ### Repositorios y demos
 
-Las tarjetas de los tres proyectos muestran un marcador «Repositorio — enlace por agregar», dado que los repositorios aún no se encuentran publicados. El marcado previsto para cada enlace es:
-
-```html
-<a class="project-link" href="URL_DEL_REPOSITORIO" target="_blank" rel="noopener noreferrer">
-  Ver repositorio
-</a>
-```
-
-Los estilos de `.project-link` ya están definidos. En caso de existir una demostración pública, se incorpora con el mismo formato y el texto «Ver demo». No se incluyen enlaces a recursos inexistentes.
+Las tarjetas de IES Connect y BUYDIMA incluyen el enlace a su repositorio en GitHub, abierto en una pestaña nueva. Innova Home no dispone de repositorio público, por lo que su tarjeta indica «no disponible». No se incluyen demostraciones públicas.
 
 ## Publicación en GitHub Pages
 
-El sitio es estático y puede publicarse de forma gratuita con HTTPS.
+El sitio está publicado mediante GitHub Pages en <https://antonella-tintilay.github.io/portafolio_cv/>, con HTTPS y acceso público.
+
+El procedimiento de publicación es el siguiente:
 
 1. Crear un repositorio público llamado `portafolio_cv`, sin archivos iniciales.
 2. Inicializar el repositorio local y subir el contenido:
@@ -154,13 +149,7 @@ git push -u origin main
 3. En GitHub, ingresar a **Settings → Pages**.
 4. En *Build and deployment*, seleccionar **Deploy from a branch**.
 5. Elegir la rama **main** y la carpeta **/ (root)**, y guardar los cambios.
-6. La publicación tarda uno o dos minutos. La URL resultante es:
-
-```
-https://antonella-tintilay.github.io/portafolio_cv/
-```
-
-La URL abre sin necesidad de iniciar sesión y utiliza HTTPS de forma automática.
+6. La publicación tarda uno o dos minutos.
 
 ### Consideraciones
 
@@ -168,13 +157,12 @@ La URL abre sin necesidad de iniciar sesión y utiliza HTTPS de forma automátic
 - Para que la descarga del currículum funcione en el sitio publicado, el PDF debe estar presente en `assets/` antes del despliegue.
 - Si GitHub solicita autenticación al subir cambios, se utiliza un token de acceso personal o una herramienta como GitHub Desktop o la integración de Git de Visual Studio Code.
 - El proyecto se encuentra dentro de una carpeta de OneDrive. Si se producen bloqueos de archivos durante el uso de Git, se recomienda trasladarlo a una ruta local fuera de OneDrive.
-- Una vez publicada la URL, es posible agregar la etiqueta `og:url` en el `<head>` de `index.html` para completar los metadatos de compartición.
 
 ## Enlaces
 
 - Correo: <mailto:antotintilay6@gmail.com>
 - LinkedIn: <https://www.linkedin.com/in/anto-tintilay-2b371b357>
 - GitHub: <https://github.com/Antonella-Tintilay>
-- Portafolio (URL prevista): <https://antonella-tintilay.github.io/portafolio_cv/>
+- Portafolio: <https://antonella-tintilay.github.io/portafolio_cv/>
 
 Los enlaces externos del sitio utilizan `target="_blank"` y `rel="noopener noreferrer"`.
