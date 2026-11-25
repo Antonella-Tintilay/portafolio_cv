@@ -36,6 +36,10 @@
        la navegación se muestra igual, en columna. -->
   <noscript>
     <style>
+      .theme-toggle {
+        display: none;
+      }
+
       @media (max-width: 900px) {
         .site-nav {
           position: static;
@@ -71,6 +75,17 @@
   
   <script>
     document.documentElement.classList.replace('no-js', 'js');
+
+    // El tema se aplica antes del primer pintado para evitar un destello.
+    (function () {
+      try {
+        if (localStorage.getItem('theme') === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (error) {
+        /* Almacenamiento bloqueado: se usa el tema oscuro por defecto. */
+      }
+    })();
   </script>
 </head>
 
@@ -84,19 +99,6 @@
         <span class="brand-mark" aria-hidden="true">AT</span>
         <span class="brand-text">Antonella Tintilay</span>
       </a>
-
-      <button
-        class="nav-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="primary-nav"
-        aria-label="Abrir menú"
-      >
-        <span class="nav-toggle-bars" aria-hidden="true">
-          <span></span>
-          <span></span>
-        </span>
-      </button>
 
       <nav class="site-nav" id="primary-nav" aria-label="Navegación principal">
         <ul>
@@ -117,6 +119,38 @@
           Descargar CV
         </a>
       </nav>
+
+      <div class="header-actions">
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Modo claro"
+          aria-pressed="false"
+        >
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4.2" />
+            <path d="M12 2.6v2.2M12 19.2v2.2M4.35 4.35l1.55 1.55M18.1 18.1l1.55 1.55M2.6 12h2.2M19.2 12h2.2M4.35 19.65l1.55-1.55M18.1 5.9l1.55-1.55" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M20.5 14.4A8.6 8.6 0 0 1 9.6 3.5a8.6 8.6 0 1 0 10.9 10.9Z" />
+          </svg>
+        </button>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Abrir menú"
+        >
+          <span class="nav-toggle-bars" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -230,6 +264,18 @@
               <p class="project-index">01</p>
               <h3>IES Connect</h3>
               <p class="project-role">Desarrolladora Backend</p>
+
+              <figure class="project-media">
+                <img
+                  src="assets/img/ies_connect.png"
+                  alt="Panel de inicio de IES Connect con accesos rápidos, comunicados y recordatorios"
+                  width="1897"
+                  height="906"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+
               <p class="project-status">
                 <span class="status-dot" aria-hidden="true"></span>
                 Proyecto académico · 2026
@@ -283,6 +329,18 @@
               <p class="project-index">02</p>
               <h3>BUYDIMA</h3>
               <p class="project-role">Desarrolladora Web</p>
+
+              <figure class="project-media">
+                <img
+                  src="assets/img/buydima.png"
+                  alt="Página principal de BUYDIMA con buscador, promoción de recargas y juegos destacados"
+                  width="1767"
+                  height="912"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+
               <p class="project-status">
                 <span class="status-dot" aria-hidden="true"></span>
                 Proyecto académico · en desarrollo local

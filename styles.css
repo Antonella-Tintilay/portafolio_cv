@@ -34,7 +34,38 @@
   --accent-strong: #2dd4bf;
   --accent-soft: rgba(94, 234, 212, 0.1);
   --accent-line: rgba(94, 234, 212, 0.32);
+  --accent-ring: rgba(94, 234, 212, 0.1);
+  --accent-hover-border: rgba(94, 234, 212, 0.26);
   --sky: #7dd3fc;
+
+  --header-bg: rgba(7, 10, 14, 0.76);
+  --header-bg-scrolled: rgba(7, 10, 14, 0.94);
+  --nav-panel-bg: rgba(11, 16, 22, 0.98);
+  --nav-panel-shadow: 0 30px 40px -30px rgba(0, 0, 0, 0.9);
+  --nav-divider: rgba(30, 40, 54, 0.65);
+
+  --selection-bg: rgba(94, 234, 212, 0.28);
+  --selection-text: #ffffff;
+
+  --btn-primary-text: #04120f;
+  --btn-primary-hover: #7ef0df;
+  --btn-primary-glow: rgba(94, 234, 212, 0.65);
+  --ghost-bg: rgba(255, 255, 255, 0.015);
+  --chip-bg: rgba(255, 255, 255, 0.02);
+  --chip-text: #c7d2e0;
+
+  --brand-glow: linear-gradient(145deg, rgba(94, 234, 212, 0.16), rgba(94, 234, 212, 0.03));
+  --brand-glow-hover: rgba(94, 234, 212, 0.16);
+  --hero-glow-1: rgba(94, 234, 212, 0.13);
+  --hero-glow-2: rgba(125, 211, 252, 0.08);
+  --hero-dots: rgba(148, 163, 184, 0.18);
+
+  --skill-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.018), transparent);
+  --skill-hover-bg: rgba(94, 234, 212, 0.025);
+  --contact-glow: rgba(94, 234, 212, 0.09);
+  --contact-link-bg: rgba(255, 255, 255, 0.018);
+  --contact-icon-bg: rgba(7, 10, 14, 0.5);
+  --to-top-bg: rgba(13, 21, 29, 0.9);
 
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
@@ -45,6 +76,60 @@
   --radius-sm: 9px;
   --header-height: 72px;
   --container: 1140px;
+}
+
+/* Tema claro. El tema oscuro es el predeterminado, por lo que solo se
+   sobrescriben las variables cuando el usuario elige el modo claro. */
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f6f8fa;
+  --bg-soft: #eef2f6;
+  --surface: #ffffff;
+  --surface-2: #f7fafc;
+  --border: #dde5ee;
+  --border-strong: #c6d2e0;
+
+  --text: #0f172a;
+  --muted: #4a5a6f;
+  --muted-2: #5b6b7e;
+
+  --accent: #0f766e;
+  --accent-strong: #115e59;
+  --accent-soft: rgba(15, 118, 110, 0.08);
+  --accent-line: rgba(15, 118, 110, 0.35);
+  --accent-ring: rgba(15, 118, 110, 0.14);
+  --accent-hover-border: rgba(15, 118, 110, 0.35);
+  --sky: #0369a1;
+
+  --header-bg: rgba(246, 248, 250, 0.82);
+  --header-bg-scrolled: rgba(246, 248, 250, 0.95);
+  --nav-panel-bg: #ffffff;
+  --nav-panel-shadow: 0 30px 40px -30px rgba(15, 23, 42, 0.18);
+  --nav-divider: rgba(221, 229, 238, 0.9);
+
+  --selection-bg: rgba(15, 118, 110, 0.18);
+  --selection-text: #0f172a;
+
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover: #115e59;
+  --btn-primary-glow: rgba(15, 118, 110, 0.35);
+  --ghost-bg: rgba(15, 23, 42, 0.02);
+  --chip-bg: rgba(15, 23, 42, 0.03);
+  --chip-text: #334155;
+
+  --brand-glow: linear-gradient(145deg, rgba(15, 118, 110, 0.12), rgba(15, 118, 110, 0.03));
+  --brand-glow-hover: rgba(15, 118, 110, 0.14);
+  --hero-glow-1: rgba(15, 118, 110, 0.1);
+  --hero-glow-2: rgba(3, 105, 161, 0.07);
+  --hero-dots: rgba(100, 116, 139, 0.22);
+
+  --skill-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.018), transparent);
+  --skill-hover-bg: rgba(15, 118, 110, 0.05);
+  --contact-glow: rgba(15, 118, 110, 0.07);
+  --contact-link-bg: rgba(15, 23, 42, 0.02);
+  --contact-icon-bg: #f1f5f9;
+  --to-top-bg: rgba(255, 255, 255, 0.92);
 }
 
 *,
@@ -68,6 +153,7 @@ body {
   background-color: var(--bg);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1,
@@ -111,8 +197,8 @@ svg {
 }
 
 ::selection {
-  background: rgba(94, 234, 212, 0.28);
-  color: #ffffff;
+  background: var(--selection-bg);
+  color: var(--selection-text);
 }
 
 :focus-visible {
@@ -147,7 +233,7 @@ svg {
   padding: 0.75rem 1.1rem;
   border-radius: var(--radius-sm);
   background: var(--accent);
-  color: #04120f;
+  color: var(--btn-primary-text);
   font-weight: 600;
   transition: top 0.2s ease;
 }
@@ -185,18 +271,18 @@ main:focus {
 .btn-primary {
   background: var(--accent);
   border-color: var(--accent);
-  color: #04120f;
+  color: var(--btn-primary-text);
 }
 
 .btn-primary:hover {
-  background: #7ef0df;
-  border-color: #7ef0df;
+  background: var(--btn-primary-hover);
+  border-color: var(--btn-primary-hover);
   transform: translateY(-1px);
-  box-shadow: 0 12px 30px -14px rgba(94, 234, 212, 0.65);
+  box-shadow: 0 12px 30px -14px var(--btn-primary-glow);
 }
 
 .btn-ghost {
-  background: rgba(255, 255, 255, 0.015);
+  background: var(--ghost-bg);
   border-color: var(--border-strong);
   color: var(--text);
 }
@@ -218,8 +304,8 @@ main:focus {
   padding: 0.35rem 0.62rem;
   border: 1px solid var(--border);
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.02);
-  color: #c7d2e0;
+  background: var(--chip-bg);
+  color: var(--chip-text);
   font-family: var(--font-mono);
   font-size: 0.73rem;
   line-height: 1.4;
@@ -232,7 +318,7 @@ main:focus {
   height: 6px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 4px rgba(94, 234, 212, 0.1);
+  box-shadow: 0 0 0 4px var(--accent-ring);
 }
 
 .section {
@@ -286,7 +372,7 @@ main:focus {
   position: sticky;
   top: 0;
   z-index: 60;
-  background: rgba(7, 10, 14, 0.76);
+  background: var(--header-bg);
   border-bottom: 1px solid transparent;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -294,7 +380,7 @@ main:focus {
 }
 
 .site-header.is-scrolled {
-  background: rgba(7, 10, 14, 0.94);
+  background: var(--header-bg-scrolled);
   border-bottom-color: var(--border);
 }
 
@@ -304,6 +390,52 @@ main:focus {
   justify-content: space-between;
   gap: 1.5rem;
   min-height: var(--header-height);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Botón de tema: muestra el sol en modo oscuro y la luna en modo claro. */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--ghost-bg);
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
+}
+
+.theme-toggle svg {
+  width: 17px;
+  height: 17px;
+}
+
+.theme-toggle .icon-moon {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-toggle .icon-sun {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-toggle .icon-moon {
+  display: block;
 }
 
 .brand {
@@ -323,7 +455,7 @@ main:focus {
   height: 34px;
   border: 1px solid var(--accent-line);
   border-radius: 9px;
-  background: linear-gradient(145deg, rgba(94, 234, 212, 0.16), rgba(94, 234, 212, 0.03));
+  background: var(--brand-glow);
   color: var(--accent);
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -332,7 +464,7 @@ main:focus {
 }
 
 .brand:hover .brand-mark {
-  background: rgba(94, 234, 212, 0.16);
+  background: var(--brand-glow-hover);
   border-color: var(--accent);
 }
 
@@ -340,6 +472,7 @@ main:focus {
   display: flex;
   align-items: center;
   gap: 2rem;
+  margin-left: auto;
 }
 
 .site-nav ul {
@@ -409,7 +542,7 @@ main:focus {
   padding: 0.55rem;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.015);
+  background: var(--ghost-bg);
   cursor: pointer;
 }
 
@@ -449,8 +582,8 @@ main:focus {
   inset: -25% -10% auto;
   height: 125%;
   background:
-    radial-gradient(560px 380px at 78% 18%, rgba(94, 234, 212, 0.13), transparent 65%),
-    radial-gradient(520px 380px at 5% 0%, rgba(125, 211, 252, 0.08), transparent 60%);
+    radial-gradient(560px 380px at 78% 18%, var(--hero-glow-1), transparent 65%),
+    radial-gradient(520px 380px at 5% 0%, var(--hero-glow-2), transparent 60%);
   pointer-events: none;
 }
 
@@ -458,7 +591,7 @@ main:focus {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(148, 163, 184, 0.18) 1px, transparent 1px);
+  background-image: radial-gradient(var(--hero-dots) 1px, transparent 1px);
   background-size: 28px 28px;
   -webkit-mask-image: radial-gradient(70% 70% at 62% 34%, #000 0%, transparent 78%);
   mask-image: radial-gradient(70% 70% at 62% 34%, #000 0%, transparent 78%);
@@ -495,7 +628,7 @@ main:focus {
   height: 6px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 4px rgba(94, 234, 212, 0.1);
+  box-shadow: 0 0 0 4px var(--accent-ring);
 }
 
 .hero h1 {
@@ -621,7 +754,7 @@ main:focus {
 }
 
 .project-card:hover {
-  border-color: rgba(94, 234, 212, 0.26);
+  border-color: var(--accent-hover-border);
   background: var(--surface-2);
   transform: translateY(-2px);
 }
@@ -666,6 +799,21 @@ main:focus {
   font-size: 0.68rem;
   line-height: 1.5;
   letter-spacing: 0.04em;
+}
+
+.project-media {
+  width: 100%;
+  margin: 1.1rem 0 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background-color: var(--bg-soft);
+}
+
+.project-media img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .project-status {
@@ -778,13 +926,13 @@ a.project-link::after {
   padding: 1.4rem;
   border: 1px solid var(--border);
   border-radius: 14px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.018), transparent);
+  background: var(--skill-bg);
   transition: border-color 0.25s ease, background-color 0.25s ease;
 }
 
 .skill-group:hover {
   border-color: var(--border-strong);
-  background: rgba(94, 234, 212, 0.025);
+  background: var(--skill-hover-bg);
 }
 
 .skill-group h3 {
@@ -824,7 +972,7 @@ a.project-link::after {
   border: 1px solid var(--border);
   border-radius: 20px;
   background:
-    radial-gradient(120% 150% at 0% 0%, rgba(94, 234, 212, 0.09), transparent 55%),
+    radial-gradient(120% 150% at 0% 0%, var(--contact-glow), transparent 55%),
     var(--surface);
 }
 
@@ -869,7 +1017,7 @@ a.project-link::after {
   padding: 0.45rem 0.75rem;
   border: 1px solid var(--border-strong);
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--chip-bg);
   color: var(--muted);
   font-family: var(--font-mono);
   font-size: 0.66rem;
@@ -905,7 +1053,7 @@ a.project-link::after {
   padding: 0.9rem 1rem;
   border: 1px solid var(--border);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.018);
+  background: var(--contact-link-bg);
   color: var(--muted);
   font-size: 0.9rem;
   transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease,
@@ -927,7 +1075,7 @@ a.project-link::after {
   height: 30px;
   border: 1px solid var(--border);
   border-radius: 7px;
-  background: rgba(7, 10, 14, 0.5);
+  background: var(--contact-icon-bg);
   color: var(--accent);
 }
 
@@ -996,7 +1144,7 @@ a.project-link::after {
   height: 42px;
   border: 1px solid var(--border-strong);
   border-radius: 50%;
-  background: rgba(13, 21, 29, 0.9);
+  background: var(--to-top-bg);
   color: var(--muted);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -1098,8 +1246,8 @@ a.project-link::after {
     gap: 0.35rem;
     padding: 1rem 1.5rem 1.4rem;
     border-bottom: 1px solid var(--border);
-    background: rgba(11, 16, 22, 0.98);
-    box-shadow: 0 30px 40px -30px rgba(0, 0, 0, 0.9);
+    background: var(--nav-panel-bg);
+    box-shadow: var(--nav-panel-shadow);
   }
 
   .site-nav.is-open {
@@ -1115,7 +1263,7 @@ a.project-link::after {
   .nav-link {
     display: block;
     padding: 0.7rem 0.25rem;
-    border-bottom: 1px solid rgba(30, 40, 54, 0.65);
+    border-bottom: 1px solid var(--nav-divider);
     font-size: 0.95rem;
   }
 

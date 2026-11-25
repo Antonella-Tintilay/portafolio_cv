@@ -10,6 +10,7 @@
    5. Animaciones de aparición al hacer scroll.
    6. Botón para copiar el correo.
    7. Botón "volver arriba".
+   8. Selector de tema claro/oscuro.
    ========================================================================== */
 
 'use strict';
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initActiveNavLink();
   initCopyEmail();
   initBackToTop();
+  initThemeToggle();
 });
 
 /* -------------------------------------------------------------------------
@@ -280,4 +282,51 @@ function initBackToTop() {
   );
 
   updateVisibility();
+}
+
+/* -------------------------------------------------------------------------
+   8. Selector de tema
+   El modo oscuro es el predeterminado. El tema elegido se guarda en
+   localStorage y se vuelve a aplicar desde el <head> antes del primer
+   pintado, para que no haya un destello del tema equivocado.
+   ------------------------------------------------------------------------- */
+function initThemeToggle() {
+  const toggle = document.querySelector('.theme-toggle');
+  if (!toggle) return;
+
+  const root = document.documentElement;
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+  const STORAGE_KEY = 'theme';
+  const COLORS = { dark: '#070a0e', light: '#f6f8fa' };
+
+  const applyTheme = (theme, persist) => {
+    const isLight = theme === 'light';
+
+    if (isLight) {
+      root.setAttribute('data-theme', 'light');
+    } else {
+      root.removeAttribute('data-theme');
+    }
+
+    toggle.setAttribute('aria-pressed', String(isLight));
+
+    if (themeColor) {
+      themeColor.setAttribute('content', isLight ? COLORS.light : COLORS.dark);
+    }
+
+    if (!persist) return;
+
+    try {
+      localStorage.setItem(STORAGE_KEY, theme);
+    } catch (error) {
+      // Con el almacenamiento bloqueado, el tema funciona igual en la sesión.
+    }
+  };
+
+  applyTheme(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark', false);
+
+  toggle.addEventListener('click', () => {
+    const isLight = root.getAttribute('data-theme') === 'light';
+    applyTheme(isLight ? 'dark' : 'light', true);
+  });
 }
